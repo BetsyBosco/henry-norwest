@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#263b34">
+  <meta name="description" content="Learn more about the life of Henry Norwest and the battles he fought in through an interactive timeline, original records, and the story of Vimy Ridge.">
+  <title>The Life of Henry Norwest</title>
+  <link rel="preload" href="assets/fonts/serif.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Home">Home</a>
+    <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Explore <span aria-hidden="true">☰</span></button>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="#life">His life</a><a href="#service">His service</a><a href="#timeline">Timeline</a><a href="#vimy">Vimy Ridge</a><a href="#poetry">Art & poetry</a><a href="#remembrance">Remembrance</a><a href="#reflections">Reflections</a><a href="#sources">Works Cited</a>
+      <a href="#archive" class="nav-archive">The archive</a>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1"><div class="loading">Opening the exhibition…</div></main>
+  <footer class="site-footer">
+    <div><a class="footer-title" href="#home">A life remembered.</a><p>Henry Louis Norwest · 1884–1918</p></div>
+    <div class="footer-project"><p><strong>Betsy Joanna Jesus Bosco</strong></p></div>
+    <div class="footer-links"><a href="#sources">Works Cited</a><a href="#archive">Explore the complete archive</a></div>
+  </footer>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-title">
+    <div class="dialog-top"><span class="eyebrow" id="image-position">THE COLLECTION</span><button class="icon-button" data-close="image-dialog" aria-label="Close image">✕</button></div>
+    <div id="image-stage" class="image-stage"></div>
+    <div class="viewer-controls"><button class="text-button" id="image-prev">Previous</button><span id="image-zoom-label">100%</span><button class="icon-button" id="image-zoom-out" aria-label="Zoom out">−</button><button class="icon-button" id="image-zoom-in" aria-label="Zoom in">+</button><button class="text-button" id="image-reset">Reset</button><button class="text-button" id="image-next">Next</button></div>
+    <div class="image-info"><h2 id="image-title"></h2><p id="image-caption"></p><a id="image-original" target="_blank" rel="noopener" class="text-link">Open original image</a></div>
+  </dialog>
+  <dialog id="event-media-dialog" class="image-dialog" aria-labelledby="event-media-title">
+    <div class="dialog-top"><span class="eyebrow">ORIGINAL RECORD · TIMELINE</span><button class="icon-button" data-close="event-media-dialog" aria-label="Close document">✕</button></div>
+    <div class="image-stage"><img id="event-media-image" alt=""></div>
+    <div class="image-info"><h2 id="event-media-title"></h2><a id="event-media-original" target="_blank" rel="noopener" class="text-link">Open full image</a></div>
+  </dialog>
+  <dialog id="record-dialog" class="record-dialog" aria-labelledby="record-title">
+    <div class="dialog-top"><div><span class="eyebrow" id="record-eyebrow">ORIGINAL DOCUMENTS · COMPLETE FILE</span><h2 id="record-title">The service record</h2></div><button class="icon-button" data-close="record-dialog" aria-label="Close record viewer">✕</button></div>
+    <div class="record-layout"><aside class="record-sidebar"><label for="record-jump">Go to a record group</label><select id="record-jump"><option value="1">Attestation papers</option><option value="5">Record covers & index cards</option><option value="29">Hospital record</option><option value="33">Discharge proceedings</option><option value="37">Active service forms</option><option value="43">Pay & allowances</option><option value="59">Medical history</option><option value="61">Estate & final records</option></select><div id="record-thumbs" class="record-thumbs"></div></aside><div class="record-main"><div class="record-controls"><button id="record-prev" class="text-button">Previous</button><label for="record-page">Page</label><input id="record-page" type="number" min="1" max="66" value="1"><span id="record-total">of 66</span><button id="record-next" class="text-button">Next</button><button id="record-zoom-out" class="icon-button" aria-label="Zoom out">−</button><button id="record-zoom-in" class="icon-button" aria-label="Zoom in">+</button></div><div class="record-stage" id="record-stage"><img id="record-image" alt=""></div><div class="record-bottom"><span id="record-bottom-note">All pages retained, including blank reverse sides.</span><a id="record-download" href="documents/henry-norwest-complete-service-file.pdf" target="_blank" rel="noopener">Download complete PDF</a></div></div></div>
+  </dialog>
+  <noscript><div class="noscript">Please enable JavaScript to explore the interactive exhibition. You can still <a href="documents/original-research-notes.txt">read the research notes</a> or <a href="documents/henry-norwest-complete-service-file.pdf">open the complete service file</a>.</div></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
